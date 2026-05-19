@@ -11,6 +11,15 @@
                 <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('footer.cta_button'), ENT_QUOTES, 'UTF-8') ?></a>
             </div>
         </div>
+        <div class="container footer-data-removal">
+            <div class="footer-data-removal-card">
+                <div class="footer-data-removal-copy">
+                    <h3><?= htmlspecialchars(t('footer.data_delete_title'), ENT_QUOTES, 'UTF-8') ?></h3>
+                    <p><?= htmlspecialchars(t('footer.data_delete_text'), ENT_QUOTES, 'UTF-8') ?></p>
+                </div>
+                <a class="button" href="mailto:marcusfreitasantos+listeasyapp@gmail.com"><?= htmlspecialchars(t('footer.data_delete_button'), ENT_QUOTES, 'UTF-8') ?></a>
+            </div>
+        </div>
     </footer>
 </div>
 </body>

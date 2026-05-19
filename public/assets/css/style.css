@@ -593,6 +593,30 @@ a {
   margin-bottom: 14px;
 }
 
+.footer-data-removal {
+  margin-top: 26px;
+}
+
+.footer-data-removal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-data-removal-copy h3 {
+  margin: 0 0 10px;
+  font-family: "Sora", "Avenir Next", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+.footer-data-removal-copy p {
+  max-width: 760px;
+}
+
 .legal-page {
   padding: 72px 0 88px;
 }
@@ -649,7 +673,8 @@ a {
   .campaign-grid,
   .highlight-grid,
   .cta-band-inner,
-  .footer-grid {
+  .footer-grid,
+  .footer-data-removal-card {
     grid-template-columns: 1fr;
   }
 
@@ -669,7 +694,8 @@ a {
   }
 
   .cta-band-inner,
-  .footer-grid {
+  .footer-grid,
+  .footer-data-removal-card {
     display: grid;
   }
 
