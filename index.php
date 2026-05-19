@@ -2,45 +2,45 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/config/site.php';
+require __DIR__ . '/config/i18n.php';
 
-$pageTitle = 'ListEasy | Organize suas compras com mais praticidade';
+$pageTitle = t('home.title');
 $highlights = [
     [
-        'title' => 'Compartilhe em segundos',
-        'text' => 'Convide outras pessoas com poucos toques e mantenha todo mundo atualizado sobre o que falta comprar.',
+        'title' => t('home.highlight_1.title'),
+        'text' => t('home.highlight_1.text'),
     ],
     [
-        'title' => 'Controle visual dos itens',
-        'text' => 'Acompanhe o total da lista, marque produtos comprados e veja quantidades e precos com clareza.',
+        'title' => t('home.highlight_2.title'),
+        'text' => t('home.highlight_2.text'),
     ],
     [
-        'title' => 'Exporte e envie em PDF',
-        'text' => 'Gere uma versao limpa da sua lista para mandar por e-mail, Whatsapp ou guardar como registro.',
+        'title' => t('home.highlight_3.title'),
+        'text' => t('home.highlight_3.text'),
     ],
 ];
 
 $featureCards = [
     [
-        'eyebrow' => 'Lista inteligente',
-        'title' => 'Tudo o que voce precisa para comprar sem esquecer nada.',
-        'text' => 'Crie listas por ocasiao, pesquise itens rapidamente e acompanhe o valor total enquanto faz as compras.',
+        'eyebrow' => t('home.feature_1.eyebrow'),
+        'title' => t('home.feature_1.title'),
+        'text' => t('home.feature_1.text'),
         'image' => $site['screenshots'][0],
-        'image_alt' => 'Tela de acompanhamento da lista de compras no aplicativo',
+        'image_alt' => t('home.feature_1.alt'),
     ],
     [
-        'eyebrow' => 'Compartilhamento simples',
-        'title' => 'Em apenas um clique, compartilhe suas listas com quem voce quiser.',
-        'text' => 'Ideal para casais, familias e equipes que precisam colaborar na mesma compra sem trocar mensagens o tempo todo.',
+        'eyebrow' => t('home.feature_2.eyebrow'),
+        'title' => t('home.feature_2.title'),
+        'text' => t('home.feature_2.text'),
         'image' => $site['screenshots'][2],
-        'image_alt' => 'Tela de convite para compartilhar lista no aplicativo',
+        'image_alt' => t('home.feature_2.alt'),
     ],
     [
-        'eyebrow' => 'Compras organizadas',
-        'title' => 'Exporte em PDF e mantenha suas listas sempre acessiveis.',
-        'text' => 'Transforme sua lista em um documento pronto para enviar ou consultar quando precisar, com o mesmo visual claro do app.',
+        'eyebrow' => t('home.feature_3.eyebrow'),
+        'title' => t('home.feature_3.title'),
+        'text' => t('home.feature_3.text'),
         'image' => $site['screenshots'][3],
-        'image_alt' => 'Tela de exportacao da lista em PDF no aplicativo',
+        'image_alt' => t('home.feature_3.alt'),
     ],
 ];
 
@@ -50,31 +50,31 @@ require __DIR__ . '/components/header.php';
     <div class="hero-pattern" aria-hidden="true"></div>
     <div class="container hero-grid">
         <div class="hero-copy">
-            <span class="kicker">Mais praticidade para sua rotina</span>
-            <h1>ListEasy facilita sua vida na hora de organizar, compartilhar e economizar.</h1>
-            <p>Inspirado na agilidade dos anuncios da marca, o app ajuda voce a criar listas de compras bonitas, objetivas e prontas para serem usadas em conjunto.</p>
+            <span class="kicker"><?= htmlspecialchars(t('home.hero.kicker'), ENT_QUOTES, 'UTF-8') ?></span>
+            <h1><?= htmlspecialchars(t('home.hero.title'), ENT_QUOTES, 'UTF-8') ?></h1>
+            <p><?= htmlspecialchars(t('home.hero.body'), ENT_QUOTES, 'UTF-8') ?></p>
             <div class="hero-actions">
-                <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer">Baixe agora na Play Store</a>
-                <a class="button button-ghost" href="#galeria">Ver telas do app</a>
+                <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.hero.cta_primary'), ENT_QUOTES, 'UTF-8') ?></a>
+                <a class="button button-ghost" href="#galeria"><?= htmlspecialchars(t('home.hero.cta_secondary'), ENT_QUOTES, 'UTF-8') ?></a>
             </div>
             <div class="hero-proof">
                 <div>
-                    <strong>Compartilhe listas</strong>
-                    <span>com familia, amigos ou equipe</span>
+                    <strong><?= htmlspecialchars(t('home.hero.proof_1_title'), ENT_QUOTES, 'UTF-8') ?></strong>
+                    <span><?= htmlspecialchars(t('home.hero.proof_1_text'), ENT_QUOTES, 'UTF-8') ?></span>
                 </div>
                 <div>
-                    <strong>Exporte em PDF</strong>
-                    <span>e envie por onde preferir</span>
+                    <strong><?= htmlspecialchars(t('home.hero.proof_2_title'), ENT_QUOTES, 'UTF-8') ?></strong>
+                    <span><?= htmlspecialchars(t('home.hero.proof_2_text'), ENT_QUOTES, 'UTF-8') ?></span>
                 </div>
             </div>
         </div>
         <div class="hero-visual">
             <div class="phone-stack">
                 <figure class="phone-card phone-card-back">
-                    <img src="<?= htmlspecialchars($site['screenshots'][2], ENT_QUOTES, 'UTF-8') ?>" alt="Tela de compartilhamento do aplicativo ListEasy">
+                    <img src="<?= htmlspecialchars($site['screenshots'][2], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars(t('home.hero.alt_back'), ENT_QUOTES, 'UTF-8') ?>">
                 </figure>
                 <figure class="phone-card phone-card-front">
-                    <img src="<?= htmlspecialchars($site['screenshots'][0], ENT_QUOTES, 'UTF-8') ?>" alt="Tela principal da lista de compras no aplicativo ListEasy">
+                    <img src="<?= htmlspecialchars($site['screenshots'][0], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars(t('home.hero.alt_front'), ENT_QUOTES, 'UTF-8') ?>">
                 </figure>
             </div>
         </div>
@@ -84,9 +84,8 @@ require __DIR__ . '/components/header.php';
 <section class="highlights" id="beneficios">
     <div class="container">
         <div class="section-heading centered">
-            <span class="kicker">Por que usar</span>
-            <h2>Menos improviso no mercado, mais controle no seu dia.</h2>
-            <p>Os anuncios destacam rapidez, colaboracao e organizacao. Trouxemos essa mesma mensagem para uma landing page clara e direta.</p>
+            <span class="kicker"><?= htmlspecialchars(t('home.benefits.kicker'), ENT_QUOTES, 'UTF-8') ?></span>
+            <h2><?= htmlspecialchars(t('home.benefits.title'), ENT_QUOTES, 'UTF-8') ?></h2>
         </div>
         <div class="highlight-grid">
             <?php foreach ($highlights as $item): ?>
@@ -100,23 +99,6 @@ require __DIR__ . '/components/header.php';
     </div>
 </section>
 
-<section class="campaign-section">
-    <div class="container">
-        <div class="section-heading">
-            <span class="kicker">Identidade visual</span>
-            <h2>A mesma energia dos anuncios, agora em uma experiencia completa na web.</h2>
-            <p>O contraste entre fundo escuro, linhas geometricas e amarelo vibrante reforca a personalidade do ListEasy do primeiro clique ate a instalacao do app.</p>
-        </div>
-        <div class="campaign-grid">
-            <?php foreach ($site['google_ads'] as $position => $campaign): ?>
-                <figure class="campaign-card">
-                    <img src="<?= htmlspecialchars($campaign, ENT_QUOTES, 'UTF-8') ?>" alt="Peca da campanha visual <?= $position + 1 ?> do ListEasy">
-                </figure>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
 <section class="feature-showcase" id="recursos">
     <div class="container">
         <?php foreach ($featureCards as $index => $feature): ?>
@@ -125,7 +107,7 @@ require __DIR__ . '/components/header.php';
                     <span class="kicker"><?= htmlspecialchars($feature['eyebrow'], ENT_QUOTES, 'UTF-8') ?></span>
                     <h2><?= htmlspecialchars($feature['title'], ENT_QUOTES, 'UTF-8') ?></h2>
                     <p><?= htmlspecialchars($feature['text'], ENT_QUOTES, 'UTF-8') ?></p>
-                    <a class="text-link" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer">Quero testar o ListEasy</a>
+                    <a class="text-link" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.feature.link'), ENT_QUOTES, 'UTF-8') ?></a>
                 </div>
                 <div class="feature-visual">
                     <div class="feature-frame">
@@ -140,14 +122,14 @@ require __DIR__ . '/components/header.php';
 <section class="gallery-section" id="galeria">
     <div class="container">
         <div class="section-heading">
-            <span class="kicker">Telas do aplicativo</span>
-            <h2>Veja como o ListEasy funciona na pratica.</h2>
-            <p>Uma galeria com os principais fluxos do app para reforcar a proposta visual e mostrar a experiencia real para quem visita a pagina.</p>
+            <span class="kicker"><?= htmlspecialchars(t('home.gallery.kicker'), ENT_QUOTES, 'UTF-8') ?></span>
+            <h2><?= htmlspecialchars(t('home.gallery.title'), ENT_QUOTES, 'UTF-8') ?></h2>
+            <p><?= htmlspecialchars(t('home.gallery.body'), ENT_QUOTES, 'UTF-8') ?></p>
         </div>
         <div class="gallery-grid">
             <?php foreach ($site['screenshots'] as $position => $screenshot): ?>
                 <figure class="gallery-card">
-                    <img src="<?= htmlspecialchars($screenshot, ENT_QUOTES, 'UTF-8') ?>" alt="Screenshot <?= $position + 1 ?> do aplicativo ListEasy">
+                    <img src="<?= htmlspecialchars($screenshot, ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars(sprintf(t('home.gallery.alt'), $position + 1), ENT_QUOTES, 'UTF-8') ?>">
                 </figure>
             <?php endforeach; ?>
         </div>
@@ -157,11 +139,11 @@ require __DIR__ . '/components/header.php';
 <section class="cta-band">
     <div class="container cta-band-inner">
         <div>
-            <span class="kicker">Baixe agora</span>
-            <h2>Suas compras sempre organizadas, dentro e fora do mercado.</h2>
-            <p>Use o ListEasy para planejar melhor, dividir tarefas e acompanhar tudo com uma interface elegante e objetiva.</p>
+            <span class="kicker"><?= htmlspecialchars(t('home.cta.kicker'), ENT_QUOTES, 'UTF-8') ?></span>
+            <h2><?= htmlspecialchars(t('home.cta.title'), ENT_QUOTES, 'UTF-8') ?></h2>
+            <p><?= htmlspecialchars(t('home.cta.body'), ENT_QUOTES, 'UTF-8') ?></p>
         </div>
-        <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer">Instalar na Play Store</a>
+        <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.cta.button'), ENT_QUOTES, 'UTF-8') ?></a>
     </div>
 </section>
 <?php require __DIR__ . '/components/footer.php'; ?>
