@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home4/mafrei65/listeasyapp.work.gd/repo/
+    - /bin/cp -R . $DEPLOYPATH

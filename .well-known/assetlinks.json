@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.penpack.listeasy",
+      "sha256_cert_fingerprints": [
+        "04:90:02:CD:D1:08:F5:2F:F9:DA:BF:7C:61:E8:DE:1A:4A:09:DA:F1:F9:5C:59:4F:FC:31:3C:84:4B:E2:A2:52"
+      ]
+    }
+  }
+]
