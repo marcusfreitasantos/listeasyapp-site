@@ -24,6 +24,7 @@ $homeDownloadUrl = $isHomePage ? '#download' : page_url('index.php', [], 'downlo
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 </head>
 <body>
 <div class="site-shell">
