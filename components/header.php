@@ -38,6 +38,7 @@ $homeDownloadUrl = $isHomePage ? '#download' : page_url('index.php', [], 'downlo
                 <a href="<?= htmlspecialchars($homeFeaturesUrl, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('nav.features'), ENT_QUOTES, 'UTF-8') ?></a>
                 <a href="<?= htmlspecialchars($homeScreensUrl, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('nav.screens'), ENT_QUOTES, 'UTF-8') ?></a>
                 <a href="<?= htmlspecialchars($homeDownloadUrl, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('nav.download'), ENT_QUOTES, 'UTF-8') ?></a>
+                <a href="<?= htmlspecialchars(page_url('support.php'), ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('nav.support'), ENT_QUOTES, 'UTF-8') ?></a>
                 <a href="<?= htmlspecialchars(page_url('privacy-policy.php'), ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('nav.privacy'), ENT_QUOTES, 'UTF-8') ?></a>
             </nav>
             <div class="header-actions">
