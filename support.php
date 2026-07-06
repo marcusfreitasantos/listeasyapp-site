@@ -3,9 +3,11 @@
 declare(strict_types=1);
 
 require __DIR__ . '/config/i18n.php';
+require __DIR__ . '/lib/smtp-mailer.php';
 
 $pageTitle = t('support.title');
-$supportEmail = 'marcusfreitasantos+listeasy@gmail.com';
+$mailConfig = require __DIR__ . '/config/mail.php';
+$supportEmail = (string) $mailConfig['support_email'];
 $formStatus = null;
 $formMessage = null;
 $formValues = [
@@ -49,13 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'Message:',
             $formValues['message'],
         ]);
-        $headers = [
-            'From: ListEasy Support <no-reply@listeasy.app>',
-            'Reply-To: ' . $safeName . ' <' . $safeEmail . '>',
-            'Content-Type: text/plain; charset=UTF-8',
-        ];
-
-        if (@mail($supportEmail, $subject, $body, implode("\r\n", $headers))) {
+        if (smtp_send_mail($mailConfig, $supportEmail, $subject, $body, $safeEmail, $safeName)) {
             $formStatus = 'success';
             $formMessage = t('support.form_success');
             $formValues = array_fill_keys(array_keys($formValues), '');
