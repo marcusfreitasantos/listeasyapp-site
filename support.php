@@ -93,8 +93,9 @@ require __DIR__ . '/components/header.php';
             </div>
             <div>
                 <span><?= htmlspecialchars(t('support.email_label'), ENT_QUOTES, 'UTF-8') ?></span>
-                <strong><?= htmlspecialchars(t('support.email_text'), ENT_QUOTES, 'UTF-8') ?></strong>
+                <strong><a href="mailto:<?= htmlspecialchars($supportEmail, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('support.email_text'), ENT_QUOTES, 'UTF-8') ?></a></strong>
             </div>
+            <a class="button button-small support-email-button" href="mailto:<?= htmlspecialchars($supportEmail, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('support.email_cta'), ENT_QUOTES, 'UTF-8') ?></a>
         </div>
     </div>
 

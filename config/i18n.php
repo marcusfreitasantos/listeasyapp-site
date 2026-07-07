@@ -94,6 +94,7 @@ $translations = [
         'support.response_time_text' => 'Normalmente respondemos em ate 3 dias uteis.',
         'support.email_label' => 'E-mail de suporte',
         'support.email_text' => 'support@listeasyapp.work.gd',
+        'support.email_cta' => 'Enviar e-mail para o suporte',
         'support.card_1_title' => 'Problemas de acesso',
         'support.card_1_text' => 'Informe o e-mail usado no aplicativo, o modelo do aparelho e o que aconteceu antes do erro aparecer.',
         'support.card_2_title' => 'Listas e compartilhamento',
@@ -190,6 +191,7 @@ $translations = [
         'support.response_time_text' => 'We usually reply within 3 business days.',
         'support.email_label' => 'Support email',
         'support.email_text' => 'support@listeasyapp.work.gd',
+        'support.email_cta' => 'Email support',
         'support.card_1_title' => 'Access issues',
         'support.card_1_text' => 'Include the email used in the app, the device model, and what happened before the issue appeared.',
         'support.card_2_title' => 'Lists and sharing',
@@ -214,7 +216,7 @@ $translations = [
     ],
 ];
 
-$locale = 'pt-BR';
+$locale = 'en';
 
 if (isset($_GET['lang']) && is_string($_GET['lang']) && isset($supportedLocales[$_GET['lang']])) {
     $locale = $_GET['lang'];
@@ -225,6 +227,17 @@ if (isset($_GET['lang']) && is_string($_GET['lang']) && isset($supportedLocales[
     ]);
 } elseif (isset($_COOKIE['listeasy_lang']) && is_string($_COOKIE['listeasy_lang']) && isset($supportedLocales[$_COOKIE['listeasy_lang']])) {
     $locale = $_COOKIE['listeasy_lang'];
+} elseif (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && is_string($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    $acceptedLanguages = explode(',', strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']));
+
+    foreach ($acceptedLanguages as $acceptedLanguage) {
+        $languageCode = trim(explode(';', $acceptedLanguage, 2)[0]);
+
+        if ($languageCode === 'pt' || str_starts_with($languageCode, 'pt-')) {
+            $locale = 'pt-BR';
+            break;
+        }
+    }
 }
 
 function t(string $key, array $replace = []): string

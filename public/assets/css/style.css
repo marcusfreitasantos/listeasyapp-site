@@ -734,6 +734,19 @@ a {
   line-height: 1.5;
 }
 
+.support-meta a:not(.button) {
+  color: var(--text);
+}
+
+.support-meta a:not(.button):hover,
+.support-meta a:not(.button):focus-visible {
+  color: var(--primary);
+}
+
+.support-email-button {
+  width: 100%;
+}
+
 .support-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
