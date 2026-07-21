@@ -54,8 +54,8 @@ require __DIR__ . '/components/header.php';
             <h1><?= htmlspecialchars(t('home.hero.title'), ENT_QUOTES, 'UTF-8') ?></h1>
             <p><?= htmlspecialchars(t('home.hero.body'), ENT_QUOTES, 'UTF-8') ?></p>
             <div class="hero-actions">
-                <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.hero.cta_primary'), ENT_QUOTES, 'UTF-8') ?></a>
-                <a class="button button-ghost" href="#galeria"><?= htmlspecialchars(t('home.hero.cta_secondary'), ENT_QUOTES, 'UTF-8') ?></a>
+                <a class="button" href="<?= htmlspecialchars($site['app_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.hero.cta_ios'), ENT_QUOTES, 'UTF-8') ?></a>
+                <a class="button button-ghost" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.hero.cta_primary'), ENT_QUOTES, 'UTF-8') ?></a>
             </div>
             <div class="hero-proof">
                 <div>
@@ -107,7 +107,10 @@ require __DIR__ . '/components/header.php';
                     <span class="kicker"><?= htmlspecialchars($feature['eyebrow'], ENT_QUOTES, 'UTF-8') ?></span>
                     <h2><?= htmlspecialchars($feature['title'], ENT_QUOTES, 'UTF-8') ?></h2>
                     <p><?= htmlspecialchars($feature['text'], ENT_QUOTES, 'UTF-8') ?></p>
-                    <a class="text-link" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.feature.link'), ENT_QUOTES, 'UTF-8') ?></a>
+                    <div class="store-buttons store-buttons-inline">
+                        <a class="text-link" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('footer.cta_button'), ENT_QUOTES, 'UTF-8') ?></a>
+                        <a class="text-link" href="<?= htmlspecialchars($site['app_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('footer.cta_ios_button'), ENT_QUOTES, 'UTF-8') ?></a>
+                    </div>
                 </div>
                 <div class="feature-visual">
                     <div class="feature-frame">
@@ -143,7 +146,6 @@ require __DIR__ . '/components/header.php';
             <h2><?= htmlspecialchars(t('home.cta.title'), ENT_QUOTES, 'UTF-8') ?></h2>
             <p><?= htmlspecialchars(t('home.cta.body'), ENT_QUOTES, 'UTF-8') ?></p>
         </div>
-        <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('home.cta.button'), ENT_QUOTES, 'UTF-8') ?></a>
     </div>
 </section>
 <?php require __DIR__ . '/components/footer.php'; ?>

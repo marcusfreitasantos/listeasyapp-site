@@ -42,6 +42,11 @@ $homeDownloadUrl = $isHomePage ? '#download' : page_url('index.php', [], 'downlo
                 <a href="<?= htmlspecialchars(page_url('privacy-policy.php'), ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(t('nav.privacy'), ENT_QUOTES, 'UTF-8') ?></a>
             </nav>
             <div class="header-actions">
+              <div class="store-buttons store-buttons-compact" aria-label="<?= htmlspecialchars(t('nav.download_app'), ENT_QUOTES, 'UTF-8') ?>">
+                    <a class="button button-small button-outline" href="<?= htmlspecialchars($site['app_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('nav.download_ios'), ENT_QUOTES, 'UTF-8') ?></a>
+                    <a class="button button-small button-outline" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('nav.download_android'), ENT_QUOTES, 'UTF-8') ?></a>
+                </div>
+
                 <div class="language-switcher" aria-label="<?= htmlspecialchars(t('lang.switch_label'), ENT_QUOTES, 'UTF-8') ?>">
                     <?php foreach ($supportedLocales as $code => $meta): ?>
                         <a
@@ -55,7 +60,7 @@ $homeDownloadUrl = $isHomePage ? '#download' : page_url('index.php', [], 'downlo
                         </a>
                     <?php endforeach; ?>
                 </div>
-                <a class="button button-small button-outline" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('nav.download_app'), ENT_QUOTES, 'UTF-8') ?></a>
+  
             </div>
         </div>
     </header>

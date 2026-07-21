@@ -8,7 +8,10 @@
             </div>
             <div class="footer-cta">
                 <p><?= htmlspecialchars(t('footer.cta'), ENT_QUOTES, 'UTF-8') ?></p>
-                <a class="button" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('footer.cta_button'), ENT_QUOTES, 'UTF-8') ?></a>
+                <div class="store-buttons">
+                    <a class="button" href="<?= htmlspecialchars($site['app_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('footer.cta_ios_button'), ENT_QUOTES, 'UTF-8') ?></a>
+                    <a class="button button-ghost" href="<?= htmlspecialchars($site['play_store_url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noreferrer"><?= htmlspecialchars(t('footer.cta_button'), ENT_QUOTES, 'UTF-8') ?></a>
+                </div>
             </div>
         </div>
     </footer>
